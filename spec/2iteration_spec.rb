@@ -31,6 +31,18 @@ describe "Iteration 2" do
 
       expect(event.food_trucks).to eq [food_truck1, food_truck2, food_truck3]
     end
-  end
 
+    it "can list names of food trucks" do
+      food_truck1.stock(item1, 35)
+      food_truck1.stock(item2, 7)
+      food_truck2.stock(item4, 50)
+      food_truck2.stock(item3, 25)
+      food_truck3.stock(item1, 65)
+      event.add_food_truck(food_truck1)
+      event.add_food_truck(food_truck2)
+      event.add_food_truck(food_truck3)
+
+      expect(event.food_truck_names).to eq ["Rocky Mountain Pies", "Ba-Nom-a-Nom", "Palisade Peach Shack"]
+    end
+  end
 end
