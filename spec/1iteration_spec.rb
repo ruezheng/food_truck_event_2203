@@ -1,6 +1,5 @@
 require './lib/item'
 require './lib/food_truck'
-# require './lib/event'
 
 describe "Iteration 1" do
   let(:item1) { Item.new({name: 'Peach Pie (Slice)', price: "$3.75"}) }
@@ -28,9 +27,26 @@ describe "Iteration 1" do
       expect(food_truck.check_stock(item1)).to eq(0)
     end
 
-    it "can stock items" do
+    xit "can stock items and list inventory" do
       food_truck.stock(item1, 30)
+
       expect(food_truck.inventory).to eq({ item1 => 30 })
+      expect(food_truck.check_stock(item1)).to eq(30)
+    end
+
+    xit "can change stock" do
+      food_truck.stock(item1, 30)
+      food_truck.stock(item1, 25)
+
+      expect(food_truck.check_stock(item1)).to eq(25)
+    end
+
+    xit "can change inventory" do
+      food_truck.stock(item1, 30)
+      food_truck.stock(item1, 25)
+      food_truck.stock(item2, 12)
+
+      expect(food_truck.inventory).to eq ({ item1 => 30 })
     end
   end
 end
