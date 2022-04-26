@@ -24,4 +24,14 @@ class Event
     end
     trucks_with_item
   end
+
+  def sorted_item_list
+    # returns a list of all items the FoodTrucks have in stock, sorted alphabetically (by name). This list should not include any duplicate items.
+    items_arr = []
+    @food_trucks.each do |truck|
+        require "pry"; binding.pry
+      truck.inventory
+    end
+  end
+
 end

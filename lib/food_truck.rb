@@ -12,9 +12,12 @@ class FoodTruck
   end
 
   def check_stock(item)
-    @inventory.each do |item|
-      require "pry"; binding.pry
-      return item.quantity
+    if @inventory == {}
+      0
+    else
+      @inventory.each do |item, amount|
+        return amount
+      end
     end
   end
   # def check_stock(item)
@@ -25,8 +28,8 @@ class FoodTruck
   #     end
   #   end
   # end
-
-  def potential_revenue
-    
-  end
+  #
+  # def potential_revenue
+  #
+  # end
 end

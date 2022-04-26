@@ -19,7 +19,7 @@ describe "Iteration 3" do
       expect(event.food_trucks).to eq []
     end
 
-    it "can return a sorted item list" do
+    xit "can return a sorted item list" do
       food_truck1.stock(item1, 35)
       food_truck1.stock(item2, 7)
       food_truck2.stock(item4, 50)
@@ -33,7 +33,7 @@ describe "Iteration 3" do
       expect(event.sorted_item_list).to eq [item2, item4, item3]
     end
 
-    it "can return a hash of total inventory" do
+    xit "can return a hash of total inventory" do
       food_truck1.stock(item1, 35)
       food_truck1.stock(item2, 7)
       food_truck2.stock(item4, 50)

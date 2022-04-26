@@ -27,14 +27,14 @@ describe "Iteration 1" do
       expect(food_truck.check_stock(item1)).to eq(0)
     end
 
-    xit "can stock items and list inventory" do
+    it "can stock items and list inventory" do
       food_truck.stock(item1, 30)
 
       expect(food_truck.inventory).to eq({ item1 => 30 })
       expect(food_truck.check_stock(item1)).to eq(30)
     end
 
-    xit "can change stock" do
+    it "can change stock" do
       food_truck.stock(item1, 30)
       food_truck.stock(item1, 25)
 
