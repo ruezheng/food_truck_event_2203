@@ -61,7 +61,7 @@ describe "Iteration 2" do
   end
 
   describe FoodTruck do
-    xit "can calculate potential revenue of a food truck" do
+    it "can calculate potential revenue of a food truck" do
       food_truck1.stock(item1, 35)
       food_truck1.stock(item2, 7)
       food_truck2.stock(item4, 50)
