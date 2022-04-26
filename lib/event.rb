@@ -33,13 +33,14 @@ class Event
     end
   end
 
-  def total_inventory # not finished
+  def total_inventory
     inventory_hash = {}
     @food_trucks.each do |truck|
-      truck.inventory.each do |item, amount|
+      truck.inventory.each do |item, quantity|
+          require "pry"; binding.pry
         if inventory_hash[item].nil?
           inventory_hash[item] = {
-            quantity: amount,
+            quantity: quantity,
             food_trucks: [truck]
           }
         else
