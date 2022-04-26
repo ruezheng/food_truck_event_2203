@@ -25,13 +25,28 @@ class Event
     trucks_with_item
   end
 
-  def sorted_item_list
-    # returns a list of all items the FoodTrucks have in stock, sorted alphabetically (by name). This list should not include any duplicate items.
+  def sorted_item_list # not finished
+  #   # returns a list of all items the FoodTrucks have in stock, sorted alphabetically (by name). This list should not include any duplicate items.
     items_arr = []
     @food_trucks.each do |truck|
-        require "pry"; binding.pry
       truck.inventory
     end
   end
 
+  def total_inventory # not finished
+    inventory_hash = {}
+    @food_trucks.each do |truck|
+      truck.inventory.each do |item, amount|
+        if inventory_hash[item].nil?
+          inventory_hash[item] = {
+            quantity: amount,
+            food_trucks: [truck]
+          }
+        else
+          inventory_hash[item][:food_trucks] << food_truck
+        end
+      end
+    end
+    inventory_hash
+  end
 end

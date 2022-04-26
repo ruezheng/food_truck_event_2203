@@ -20,16 +20,4 @@ class FoodTruck
       end
     end
   end
-  # def check_stock(item)
-  #   item_count = 0
-  #   @inventory.each do |item, amount|
-  #     if item == item
-  #       item_count += amount
-  #     end
-  #   end
-  # end
-  #
-  # def potential_revenue
-  #
-  # end
 end
