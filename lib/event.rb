@@ -33,7 +33,7 @@ class Event
     end
   end
 
-  def total_inventory
+  def total_inventory # not finished
     inventory_hash = {}
     @food_trucks.each do |truck|
       truck.inventory.each do |item, quantity|
